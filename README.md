@@ -49,14 +49,27 @@ softirq 23125439 0 9386820 4957776 3031138 0 0 33642 0 0 5716063
 
 ```
 /proc/uptime
-     This file contains two numbers: the uptime of the system (seconds), and the amount of  time  spent  in  idle  process
-     (seconds).
+     This file contains two numbers: the uptime of the system (seconds), and the amount of  time  spent
+	 in  idle  process (seconds).
 
 ```
 
 ### /proc/loadavg
 
 0.06 0.01 0.00 1/101 9631
+
+```
+/proc/loadavg
+       The first three fields in this file are load average figures giving the number of jobs in
+       the run queue (state R) or waiting for disk I/O (state D) averaged over 1, 5, and 15 min‐
+       utes.  They are the same as the load average numbers given by uptime(1)  and  other  pro‐
+       grams.   The fourth field consists of two numbers separated by a slash (/).  The first of
+       these is  the  number  of  currently  runnable  kernel  scheduling  entities  (processes,
+       threads).   The  value  after  the slash is the number of kernel scheduling entities that
+       currently exist on the system.  The fifth field is the PID of the process that  was  most
+       recently created on the system.
+
+```
 
 
 ### /proc/meminfo

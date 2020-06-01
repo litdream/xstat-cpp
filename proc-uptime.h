@@ -3,15 +3,22 @@
 
 #include <fstream>
 
+struct UptimeInfo
+{
+	double sec;
+	double idleSec;
+};
+
 class ProcUptime
 {
  public:
-	const double sec = -1;
-	const double idleSec = -1;
-	
 	ProcUptime();
+	void reset();
+	const UptimeInfo& getInfo() const;
+	void Print() const;
 	
  protected:
+	UptimeInfo info;
 	std::ifstream fh;
 	const std::string fname = "/proc/uptime";
 };

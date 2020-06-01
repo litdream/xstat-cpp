@@ -21,11 +21,8 @@ and the system load averages for the past 1, 5, and 15 minutes.
 int main(int argc, char **argv)
 {
 	ProcUptime up;
+	// 	UptimeInfo info = up.getInfo();
+	up.Print();
 
-	// TODO:
-	//   1. This is simply copy of /proc/uptime.  Make meaningful output showed above.
-	//   2. This could be done in ProcUptime class.
-	//
-	std::cout << up.sec << " " << up.idleSec << std::endl;
 	return 0;
 }
